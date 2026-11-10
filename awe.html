@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ryan voting System</title>
+    <link rel="stylesheet" href="sawe.css">
+</head>
+<body>
+    <h1>Voting System</h1>
+
+    <div class="candidate">
+        <button onclick="vote('RYAN BATIO')">Vote for RYAN BATIO</button>
+    </div>
+
+    <div class="candidate">
+        <button onclick="vote('PHILL NEVIL')">Vote for PHILL NEVIL</button>
+    </div>
+
+    <div class="candidate">
+        <button onclick="vote('OGOLLA')">Vote for OGOLLA</button>
+    </div>
+
+    <div id="results">
+        <h2>Results</h2>
+        <p>RYAN BATIO: <span id=" RYANBATIO">0</span></p>
+        <p>PHLL NEVIL: <span id=" PHILLNEVIL">0</span></p>
+        <p>OGOLLA : <span id=" OGOLLA">0</span></p>
+    </div>
+
+    <script>
+        const votes = {
+            RYANBATIO: 0,
+            PHILLNEVIL: 0,
+            OGOLLA: 0,
+        };
+
+        function vote(candidate) {
+            votes[candidate]++;
+
+            document.getElementById('RYAN BATIOVotes').textContent = votes.RYANBATIO;
+            document.getElementById('PHILL NEVILVotes').textContent =  votes.PHILLNEVIL;
+            document.getElementById('OGOLLAVotes').textContent = votes.OGOLLA;
+        }
+    </script>
+
+</body>
+</html>
